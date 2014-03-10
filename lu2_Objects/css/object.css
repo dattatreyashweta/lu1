@@ -1,0 +1,75 @@
+html{
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #494949;
+    color: #d5d5d5;
+    font: 300 100% Lato;
+    min-height: 100%;
+}
+
+
+a{
+    font: 0.85em;
+    color: #8a8a8a;
+}
+
+#print_to_console {
+    text-align: right;
+    font-size: 0.8em;
+    padding: 0.2em 0.4em 0 0;
+}
+
+div.center{
+    text-align: center;
+    font-size: 1em;
+    padding: 0.8em 0 0.8em 0;
+    text-shadow: 1px 1px 1px #212121;
+    font-weight: 800;
+}
+
+span.describe_box{
+    display: inline-block;
+    width: 90%;
+    min-width: 500px;
+    font: 0.85em Avenir, Calibri;
+    padding-bottom: 0.55em;
+    text-align: right;
+    color: #696969;
+    text-shadow: none;
+}
+
+span.opbox{
+    display: inline-block;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    width: 90%;
+    min-width: 500px;
+    border: 1px solid #3c3f41;
+    box-shadow: 1px 1px 1px #555555;
+    min-height: 20em;
+    font: 1em Inconsolata, Consolas;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+div.timer_bottom_container{
+    bottom: 0;
+    position: fixed;
+    right: 0;
+}
+
+span.timer_bottom{
+    color: #7b8489;
+    text-align: right;
+    display: inline-block;
+    float:right;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    font: 200 0.85em Lato;
+}
+
+
+
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head>
+    <style type="text/css">
+        span.timer{
+            position: fixed;
+            bottom: 0;
+            display: inline-block;
+            padding: 2em;
+            right: 0;
+            background-color: rgba(215, 122, 213, 0.8);
+            letter-spacing: 0.5em;
+            cursor: pointer;
+        }
+    </style>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function(){
+            var div = document.getElementById('myDiv');
+            //console.dir(div.childNodes[0]);
+            //div.setAttribute();
+            //changeHeaders();
+            //insertRowElement();
+            //capturingAndBubbling
+           // showEvent();
+            createTimer();
+        };
+
+        function createTimer(){
+            //clock which shows timer
+            var span = document.getElementsByClassName('timer')[0];
+            span.innerHTML='hello';
+          /*  span.onclick= function(){
+                if(span.innerHTML == 'hello'){
+                    span.innerHTML = '00:00:00';
+                } else{
+                    span.innerHTML = 'hello';
+                }
+            } */
+            function showTime(){
+                var date = new Date();
+                date.getsec
+                var seconds = date.getSeconds();
+                var minutes = date.getMinutes();
+                Number.prototype.shweta_formatTwoDigits =
+                    function(){
+                        var x = this;
+                        //return(x < 10 ? '0'+x : x ); // works same as below but with if, below expression is much faster
+                        return('0'+x).slice(-2);
+                    }
+                span.innerHTML = date.getHours().shweta_formatTwoDigits() +':'+ date.getMinutes().shweta_formatTwoDigits()
+                        +':'+ date.getSeconds().shweta_formatTwoDigits();
+            }
+            setInterval(showTime, 100);
+        }
+
+        function insertRowElement(){
+            // inserts a tr element before the last element
+
+            var tbody = document.getElementById('table1').children[2];
+            var info = ['2.5', 'Mishra', '...'];
+
+            // create a table row
+            var tr = document.createElement('tr');
+            tbody.insertBefore(tr, tbody.lastElementChild);
+
+            // use a for each loop for every element in the array
+            info.forEach(function(elem){
+                var td = document.createElement('td');
+                td.innerHTML = elem;
+                tr.appendChild(td);
+            });
+        }
+        function showEvent(){
+            var btn = document.getElementById('myDiv');
+            btn.onclick= function(event){
+                console.log(event);
+            };
+
+        }
+        function capturingAndBubbling(){
+            var div= document.body.firstElementChild;
+            var span= div.firstElementChild;
+            var btn=span.firstElementChild;
+
+          /*  div.onclick= clickHandler;
+            span.onclick= clickHandler;
+            btn.onclick= clickHandler; */
+
+
+
+            div.addEventListener('click', clickHandler_capture, true);// fires on capture
+            span.addEventListener('click', clickHandler_capture, true);
+            btn.addEventListener('click', clickHandler_capture, true);
+
+            div.addEventListener('click', clickHandler, false);
+            span.addEventListener('click', clickHandler, false);
+            btn.addEventListener('click', clickHandler, false);
+
+            function clickHandler_capture(event){
+                var element = this; // fires all child
+               // var element = event.target;
+                element.style.backgroundColor='green';
+                alert(element);
+            }
+
+
+            function clickHandler(event){
+               var element = this; // fires all child
+             //   var element = event.target;
+                element.style.backgroundColor='yellow';
+                alert(element);
+            }
+           // console.log(div);
+
+        }
+
+        function changeHeaders(){
+
+            var tr = document.getElementById('table1').children[1].firstElementChild;
+
+            var btn = document.getElementById('btn');
+            console.log(tr);
+            btn.onclick = function (){
+                if (btn.innerHTML == 'Edit Heading') {
+                    btn.innerHTML = 'Done Editing';
+                    for (var i = 0; i < tr.children.length; i++) {
+                        tr.children[i].setAttribute('contenteditable', 'true');
+                    }
+                } else {
+                    btn.innerHTML = 'Edit Heading';
+                    for (var i = 0; i < tr.children.length; i++) {
+                        tr.children[i].removeAttribute('contenteditable');
+                    }
+                }
+            };
+
+        }
+    </script>
+</head>
+<body style="padding: 1em;">
+<div style="padding: 1em; background-color: #333">
+    <span style="padding: 1em; background-color: #888; display: block;">
+        <button style="padding: 1em; background-color: #ccc">
+            Fires Event
+        </button>
+    </span>
+</div>
+<div id="myDiv" class="myDivClass" style="background-color:#ccc;">
+        <span>
+            <ul>
+
+            </ul>
+        </span>
+</div>
+
+<button id='btn' contenteditable="true">Edit Heading</button>
+<table id='table1'>
+    <caption>Customer Information</caption>
+    <thead>
+    <tr>
+        <th contenteditable="">Id</th>
+        <th contenteditable="true">Name</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Krithika</td>
+        <td> ... </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Foram</td>
+        <td> ... </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Shweta</td>
+        <td> ... </td>
+    </tr>
+    </tbody>
+</table>
+
+<span class="timer">
+      00:00:00
+</span>
+
+</body>
+</html>
+

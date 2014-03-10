@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script type="text/javascript">
+            var init = new Date();
+            console.log('Time: ' + 0 + ' ms');
+            console.log('DOM is being created. Parsing HTML and adding elements to the DOM, and getting all deferred scripts!\nreadyState: "loading"');
+            document.onreadystatechange = function(){
+                var elapsedMilliseconds = ((new Date()) - init);
+                switch (document.readyState) {
+                case 'interactive':
+                console.log('Time: ' + elapsedMilliseconds + ' ms\nParsing is now complete,' +
+                'async scripts and deferred scripts are being executed, still downloading additional' +
+                'asynchronous content like images etc...' +
+                '.\nreadyState: "interactive"') ;
+                break;
+                case 'complete':
+                console.log('Time: ' + elapsedMilliseconds + ' ms\nParsing complete and ready for event handling!' +
+                '.\nreadyState: "interactive"') ;
+                break;
+                }
+            };
+
+            console.log(document);
+            </script>
+            <title>DOM Scripting</title>
+            <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+                <link rel="stylesheet" href="css/object.css"/>
+                <script type="text/javascript" src="js/jquery.js" async></script>
+            </head>
+
+            <body>
+
+
+                <div id='print_to_console'> (view firebug console) <br/>
+                </div>
+                <div class="center">
+                Timeline of DOM Parsing
+                </div>
+            </body>
+        </html>

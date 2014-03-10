@@ -1,0 +1,193 @@
+#header_menu{
+    top: 0;
+    display: block;
+    height: auto;
+    text-align: right;
+}
+
+span.address{
+    display:inline-block;
+    float: left;
+    padding: 0.85em 0.55em 0.65em 1em;
+}
+
+li.nav_menu_item{
+    display: inline-block;
+    padding: 0.85em 0.55em 0.85em 0.45em;
+}
+
+li.link{
+    border-right: 1px solid #c5c5c5;
+    cursor: pointer;
+}
+
+#container{
+    float:left;
+    width:100%;
+    height:auto;
+}
+
+#resume_header{
+    float: left;
+    width:100%;
+    height: auto;
+    text-align: right;
+    border-bottom:1px solid #c5c5c5;
+    position: relative;
+    top:0;
+}
+
+div.name{
+    padding: 0.65em 0.5em 0.35em 0.5em;
+    float: left;
+}
+
+div.section_link{
+    padding: 1.1em;
+    float:right;
+}
+
+div.section_link > a:hover{
+    cursor: pointer;
+}
+
+div.designation{
+    padding: 1.1em;
+    float: right;
+}
+
+div.about_me{
+    float: left;
+    width: 60%;
+    padding: 3em;
+}
+
+#skills{
+    float: right;
+    width: 70%;
+    padding: 0.35em 2em 2em 2em;
+}
+
+ul.skillset > li {
+    display: inline-block;
+    padding: 0.15em 0.75em 0.25em 0.75em;
+    border-radius: 0.15em;
+    margin: 0.25em 0.25em 0.45em 0.25em;
+}
+
+ul.skillset > li.hover{
+    cursor:default;
+}
+
+#education{
+    float: left;
+    padding-bottom: 3em;
+    width:80%;
+}
+
+div.qualification{
+    float:left;
+    padding:0.05em;
+}
+
+div.university{
+    float:left;
+    width:80%;
+    padding:0.05em;
+}
+
+div.courses_1{
+    float:left;
+    padding-top:1em;
+    width:50%;
+    text-align: right;
+}
+
+div.courses_1 > ul{
+    list-style-type: none;
+    padding-right: 1em;
+}
+
+div.courses_1 > ul > li:hover{
+    cursor: default;
+}
+
+div.courses_2{
+    float:left;
+    padding-top: 1em;
+    width:50%;
+    text-align:left;
+}
+
+div.courses_2 > ul{
+    border-right: none;
+    border-left: 1px solid gray;
+    padding-left: 1em;
+}
+
+#experience{
+    float: right;
+    width:70%;
+    padding:0.35em 2em 2em 2em;
+}
+
+div.experience_block{
+    height: auto;
+    float:left;
+    width:98%;
+    border-top:1px solid #acacac;
+    margin: 2em 0.5em 0.5em 0.5em;
+}
+
+span.exp_title{
+    display: inline-block;
+    width: 80%;
+    float: right;
+    padding: 0.15em;
+}
+
+ul.exp_list{
+    margin: 1em;
+    display: inline-block;
+    padding: 2em;
+    list-style-type: none;
+}
+
+
+ul.exp_list > li{
+    margin-bottom: 0.5em;
+}
+
+footer{
+    float: left;
+    width:100%;
+    display:block;
+    bottom:0;
+}
+
+div.copyright{
+    text-align: center;
+    padding:1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
